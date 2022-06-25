@@ -86,6 +86,13 @@ COMMAND | DESCRIPTION
 `docker volume inspect VOLUME` | Show information (json formatted)
 `docker volume rm VOLUME` | Destroy a volume
 ### Backup a container
+
+PATH | DESCRIPTION
+---|---
+`%cd%` | Windows Command Line
+`${PWD}` | PowerShell
+`$(pwd)` | Linux
+
 Backup docker data from inside container volumes and package it in a tarball archive.
 `docker run --rm --volumes-from CONTAINER -v $(pwd):/backup busybox tar cvfz /backup/backup.tar CONTAINERPATH`
 ### Restore container from backup
